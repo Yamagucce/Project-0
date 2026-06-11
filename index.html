@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Shopping App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Noah's Tech Shop</h1>
+
+<div class="item-list">
+    <div class="item">
+        <h3>Wireless Mouse</h3>
+        <p>$19.99</p>
+        <button onclick="checkout('Wireless Mouse', 19.99)">Buy</button>
+    </div>
+
+    <div class="item">
+        <h3>Mechanical Keyboard</h3>
+        <p>$59.99</p>
+        <button onclick="checkout('Mechanical Keyboard', 59.99)">Buy</button>
+    </div>
+
+    <div class="item">
+        <h3>USB‑C Charger</h3>
+        <p>$14.49</p>
+        <button onclick="checkout('USB‑C Charger', 14.49)">Buy</button>
+    </div>
+
+    <div class="item">
+        <h3>Noise Cancelling Headphones</h3>
+        <p>$129.99</p>
+        <button onclick="checkout('Headphones', 129.99)">Buy</button>
+    </div>
+
+    <div class="item">
+        <h3>1080p Webcam</h3>
+        <p>$39.95</p>
+        <button onclick="checkout('Webcam', 39.95)">Buy</button>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h2>Checkout</h2>
+        <p id="itemName"></p>
+        <p id="itemPrice"></p>
+
+        <input id="name" type="text" placeholder="Name on Card">
+        <input id="card" type="text" placeholder="Credit Card Number">
+        <input id="exp" type="text" placeholder="MM/YY">
+        <input id="cvv" type="text" placeholder="CVV">
+
+        <button onclick="processPayment()">Purchase</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
